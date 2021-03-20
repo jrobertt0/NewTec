@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap");
+
+html, * {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+$primaryColor: rgba(84, 217, 255, 1);
+$primaryColorDark: rgba(84, 122, 255, 1);
+
+.container {
+	text-align: center;
+	width: 100%;
+	margin-top: 2.5rem;
+}
+
+.title {
+	margin-bottom: 1rem;
+}
+
+.delete-button {
+	text-transform: capitalize;
+	padding: 0.5rem 1rem;
+	border: 0.1em solid #ffffff;
+	margin: 0 0.2rem 0.4rem 0;
+	border-radius: 5px;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: #ffffff;
+	text-align: center;
+	transition: all 0.2s;
+	background: linear-gradient(
+		90deg,
+		rgba(148, 32, 32, 1) 0%,
+		rgba(253, 29, 29, 1) 70%
+	);
+
+	&:hover {
+		color: #000000;
+		background: linear-gradient(rgba(253, 29, 29, 1));
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.fetch-button {
+	@extend .delete-button;
+	background: linear-gradient(
+		278deg,
+		$primaryColor 0%,
+		$primaryColorDark 61%
+	);
+	
+	&:hover {
+		color: #000000;
+		background: linear-gradient($primaryColor);
+	}
+}
+
+.users-container {
+	margin: 1rem 0 3rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 1s ease-in-out;
+	flex-wrap: wrap;
+
+	.user {
+		max-width: 500px;
+		width: 80%;
+		border-radius: 5px;
+		box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+		padding: 2rem;
+		margin: 0.3rem 1rem 0 1rem;
+
+		img {
+			border-radius: 100%;
+		}
+
+		.indicator {
+			position: absolute;
+			color: $primaryColorDark;
+		}
+
+		.info {
+			text-align: left;
+			margin-bottom: 1.2rem;
+
+			h3 {
+				overflow-x: scroll;
+				-ms-overflow-style: none;
+				scrollbar-width: none; 
+			}
+
+			h3::-webkit-scrollbar {
+				display: none;
+			}
+
+			h5 {
+				color: $primaryColorDark;
+				margin-top: 1rem;
+			}
+		}
+	}
+}

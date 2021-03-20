@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap");
+html, * {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  margin-top: 2.5rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.delete-button, .fetch-button {
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.2rem 0.4rem 0;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background: -webkit-gradient(linear, left top, right top, from(#942020), color-stop(70%, #fd1d1d));
+  background: linear-gradient(90deg, #942020 0%, #fd1d1d 70%);
+}
+
+.delete-button:hover, .fetch-button:hover {
+  color: #000000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fd1d1d));
+  background: linear-gradient(#fd1d1d);
+}
+
+.delete-button:focus, .fetch-button:focus {
+  outline: none;
+}
+
+.fetch-button {
+  background: linear-gradient(278deg, #54d9ff 0%, #547aff 61%);
+}
+
+.fetch-button:hover {
+  color: #000000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#54d9ff));
+  background: linear-gradient(#54d9ff);
+}
+
+.users-container {
+  margin: 1rem 0 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.users-container .user {
+  max-width: 500px;
+  width: 80%;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  padding: 2rem;
+  margin: 0.3rem 1rem 0 1rem;
+}
+
+.users-container .user img {
+  border-radius: 100%;
+}
+
+.users-container .user .indicator {
+  position: absolute;
+  color: #547aff;
+}
+
+.users-container .user .info {
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+
+.users-container .user .info h3 {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.users-container .user .info h3::-webkit-scrollbar {
+  display: none;
+}
+
+.users-container .user .info h5 {
+  color: #547aff;
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=styles.css.map */
